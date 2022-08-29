@@ -1,0 +1,27 @@
+name = "yjs-workers-example"
+main = "src/index.ts"
+compatibility_date = "2022-07-23"
+
+assets = 'public'
+
+[build]
+# frontend build 
+command = "esbuild src/app.tsx --bundle --outdir=public/dist --sourcemap --format=esm"
+
+[durable_objects]
+bindings = [
+  { name = "DO_WEBSOCKET", class_name = "WebSocketDurableObject" },
+]
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = ["WebSocketDurableObject"] # Array of new classes
+
+
+[define]
+YJS_CALLBACK_URL = "'http://localhost:8787/'"
+YJS_CALLBACK_OBJECTS = "{}"
+YJS_CALLBACK_TIMEOUT = "undefined"
+YJS_CALLBACK_DEBOUNCE_WAIT = "undefined"
+YJS_CALLBACK_DEBOUNCE_MAXWAIT = "undefined"
+YJS_GC = "undefined"

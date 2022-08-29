@@ -1,0 +1,29 @@
+{
+  "name": "yjs-workers",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.14.1",
+    "@lexical/react": "^0.3.8",
+    "@types/lodash.debounce": "^4.0.7",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "lexical": "^0.3.8",
+    "patch-package": "^6.4.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.7.4",
+    "wrangler": "^0.0.0-2b847a26"
+  },
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler publish",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "itty-durable": "^1.0.0",
+    "lib0": "^0.2.51",
+    "lodash.debounce": "^4.0.8",
+    "y-protocols": "^1.0.5"
+  }
+}

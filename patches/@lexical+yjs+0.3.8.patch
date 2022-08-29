@@ -1,0 +1,14 @@
+diff --git a/node_modules/@lexical/yjs/LexicalYjs.dev.js b/node_modules/@lexical/yjs/LexicalYjs.dev.js
+index 70ebcc1..e789cc6 100644
+--- a/node_modules/@lexical/yjs/LexicalYjs.dev.js
++++ b/node_modules/@lexical/yjs/LexicalYjs.dev.js
+@@ -7,7 +7,8 @@
+ 'use strict';
+ 
+ var lexical = require('lexical');
+-var yjs = require('yjs');
++import * as yjs from 'yjs'
++// var yjs = require('yjs');
+ var selection = require('@lexical/selection');
+ var offset = require('@lexical/offset');
+ 
